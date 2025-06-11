@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .container {
+            /* YOUR TASK: Add 3 CSS properties to center the box */
+            height: 50vh;
+            background-color: lightblue;
+            display: flex;
+justify-content: center;  /* Centers horizontally */
+align-items: center;
+            
+
+        }
+        
+        
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+
+         .button-container {
+            /* YOUR TASK: Make buttons sit side by side */
+            padding: 20px;
+            background-color: f0f0f0;
+            border: 2px dashed gray; /* Visual guide */
+        }
+         .button {
+            padding: 10px 20px;
+            background-color: blue;
+            color: white;
+            border: none;
+            margin: 5px;
+        }
+          .header {
+            /* YOUR TASK: Spread items apart */
+            padding: 20px;
+            background-color: navy;
+            color: white;
+            border: 3px solid yellow; /* Visual guide */
+            display: flex;
+justify-content: space-between;
+        }
+        
+        .logo { 
+            background-color: red; 
+            padding: 10px;
+            border: 2px solid white;
+        }
+       
+        .menu {
+            /* YOUR TASK: Stack menu items vertically */
+            width: 200px;
+            background-color: lightgray;
+            padding: 10px;
+            border: 3px solid black; /* Visual guide */
+            display: flex;
+flex-direction: column;
+        }
+        
+        .menu-item {
+            background-color: white;
+            padding: 10px;
+            margin: 5px 0;
+            border: 2px solid navy;
+            text-align: center;
+        }
+        .login { 
+            background-color: orange; 
+            padding: 10px;
+            border: 2px solid white;
+        }
+
+         .container1 {
+            display: flex;
+            height: 200px;
+            border: 3px solid black;
+            background-color: f0f0f0;
+        }
+        
+        .box1 {
+            flex: 1;
+            background-color: red;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid darkred;
+            /* YOUR TASK: Make this box take 1 part of space */
+        }
+        
+        .box2 {
+            flex: 2;
+            background-color: green;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid darkgreen;
+            /* YOUR TASK: Make this box take 2 parts of space */
+        }
+        
+        .box3 {
+            flex: 3;
+            background-color: blue;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid darkblue;
+            /* YOUR TASK: Make this box take 1 part of space */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box"></div>
+    </div>
+     <div class="button-container">
+        <button class="button">Save</button>
+        <button class="button">Cancel</button>
+        <button class="button">Delete</button>
+    </div>
+    <div class="header">
+        <div class="logo">LOGO</div>
+        <div class="menu">MENU</div>
+        <div class="login">LOGIN</div>
+    </div>
+    <div class="menu">
+        <div class="menu-item">Home</div>
+        <div class="menu-item">About</div>
+        <div class="menu-item">Services</div>
+        <div class="menu-item">Contact</div>
+    </div>
+    <div class="container1">
+        <div class="box1">Box 1</div>
+        <div class="box2">Box 2 (bigger)</div>
+        <div class="box3">Box 3</div>
+    </div>
+</body>
+</html>
