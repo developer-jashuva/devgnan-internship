@@ -1,4 +1,4 @@
-# Day-11: Understanding `let`, `var`, and `const` in JavaScript
+# Day-12: Understanding `let`, `var`, and `const` in JavaScript
 
 In this session, we explored the **scope**, **global execution context**, and **memory allocation** differences between `let`, `var`, and `const` in JavaScript with examples.
 
@@ -6,11 +6,11 @@ In this session, we explored the **scope**, **global execution context**, and **
 
 ## 🧠 Scope Comparison Table
 
-| Keyword | Scope         | Hoisted | Re-declarable | Re-assignable | Temporal Dead Zone |
-|---------|---------------|---------|----------------|----------------|--------------------|
-| `var`   | Function       | ✅ Yes  | ✅ Yes         | ✅ Yes         | ❌ No              |
-| `let`   | Block          | ✅ Yes  | ❌ No          | ✅ Yes         | ✅ Yes             |
-| `const` | Block          | ✅ Yes  | ❌ No          | ❌ No          | ✅ Yes             |
+| Keyword | Scope    | Hoisted | Re-declarable | Re-assignable | Temporal Dead Zone |
+| ------- | -------- | ------- | ------------- | ------------- | ------------------ |
+| `var`   | Function | ✅ Yes   | ✅ Yes         | ✅ Yes         | ❌ No               |
+| `let`   | Block    | ✅ Yes   | ❌ No          | ✅ Yes         | ✅ Yes              |
+| `const` | Block    | ✅ Yes   | ❌ No          | ❌ No          | ✅ Yes              |
 
 ---
 
@@ -55,3 +55,48 @@ function test() {
 }
 
 test();
+```
+
+---
+
+## 🧰 Memory Allocation (Creation Phase)
+
+During memory allocation:
+
+* `var` is hoisted and initialized with `undefined`.
+* `let` and `const` are hoisted but not initialized.
+* Accessing `let` or `const` before declaration results in a **ReferenceError** due to **Temporal Dead Zone (TDZ)**.
+
+| Variable    | Memory Slot | Initialization |
+| ----------- | ----------- | -------------- |
+| `a` (var)   | `undefined` | ✅ Yes          |
+| `b` (let)   | TDZ         | ❌ No           |
+| `c` (const) | TDZ         | ❌ No           |
+
+---
+
+## 🧪 Scope Illustration
+
+```javascript
+if (true) {
+    var a = 1;
+    let b = 2;
+    const c = 3;
+}
+
+console.log(a); // 1
+console.log(b); // ❌ Error: b is not defined
+console.log(c); // ❌ Error: c is not defined
+```
+
+---
+
+## ✅ Best Practices
+
+* Use `let` when the value will change.
+* Use `const` for constants (recommended default).
+* Avoid `var` in modern JavaScript due to its function-scoping and hoisting quirks.
+
+---
+
+📌 *Understanding these differences is essential to writing bug-free and predictable JavaScript code.*
