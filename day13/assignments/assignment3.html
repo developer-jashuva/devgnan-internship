@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Block Scope Practice</title>
+</head>
+<body>
+    <script>
+        let message = "Hello";
+        
+        {
+            let message = 67;
+            console.log("Inside:", message); // What prints?
+        }
+        
+        console.log("Outside:", message); // What prints?
+        
+        // YOUR TASK: Write your predictions as comments:
+        // Inside: ? 67
+        // Outside: ? hello
+    </script>
+</body>
+</html>
