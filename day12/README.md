@@ -8,7 +8,7 @@ In this session, we explored the **scope**, **global execution context**, and **
 
 | Keyword | Scope    | Hoisted | Re-declarable | Re-assignable | Temporal Dead Zone |
 | ------- | -------- | ------- | ------------- | ------------- | ------------------ |
-| `var`   | Function | ✅ Yes   | ✅ Yes         | ✅ Yes         | ❌ No               |
+| `var`   | Global   | ✅ Yes   | ✅ Yes         | ✅ Yes         | ❌ No               |
 | `let`   | Block    | ✅ Yes   | ❌ No          | ✅ Yes         | ✅ Yes              |
 | `const` | Block    | ✅ Yes   | ❌ No          | ❌ No          | ✅ Yes              |
 
@@ -40,7 +40,7 @@ function test() {
     const z = 300;
 
     if (true) {
-        var x = 500; // Function-scoped
+        var x = 500; // Global-scoped
         let y = 600; // Block-scoped
         const z = 700; // Block-scoped
 
