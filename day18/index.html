@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom practice</title>
+   
+</head>
+<body>
+   
+    <script>
+        document.querySelector("h1").textContent = "Hacked by Jashuva ";
+
+
+        document.querySelector("header").style.background="black";
+
+
+        const btn = document.createElement("button");
+btn.textContent = "Click Me";
+btn.style.background = "red";
+btn.style.width="50px";
+btn.style.height="20px";
+btn.onclick = () => alert("Hello from JS");
+document.querySelector("header").appendChild(btn);
+
+document.querySelectorAll("img").forEach(img => img.style.display = "none");
+
+    </script>
+</body>
+</html>
