@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>functions</title>
+
+    <style>
+        .container{
+            margin-top: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            padding: 25px;
+            width: 100%;
+            justify-content: flex-start;
+            gap: 30px;
+        }
+
+        .card{
+            height: 50vh;
+            width: 20%;
+            background-color: antiquewhite;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 5px;
+        }
+        img{
+            height: 75%;
+            width: 98%;
+            border-radius: 5px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+
+
+    </div>
+    <script>
+        const container=document.querySelector(".container");
+        //console.log(container);
+       
+        //using for loop 
+ const card=`<div class="card">
+    <img src="kalki.jpg" alt="abc" srcset="">
+    <h3>Movie: Kalki </h3>
+    <p>Year: 2024</p>
+</div>`;
+
+        for(let i=0;i<5;i++){
+            container.innerHTML+=card;
+        } 
+
+
+        //using map()
+
+       const movies=[{movieImage:"kalki.jpg",
+                        movieName:"Kalki",
+                        movieYear:2024
+        },{movieImage:"salaar.jpg",
+                        movieName:"salaar",
+                        movieYear:2024
+        },{movieImage:"kalki.jpg",
+                        movieName:"Kalki",
+                        movieYear:2024
+        },{movieImage:"salaar.jpg",
+                        movieName:"salaar",
+                        movieYear:2024
+        },{movieImage:"kalki.jpg",
+                        movieName:"Kalki",
+                        movieYear:2024
+        },{movieImage:"salaar.jpg",
+                        movieName:"salaar",
+                        movieYear:2024
+        }]
+       
+        movies.map(movie=>{
+            const card=`<div class="card">
+    <img src="${movie.movieImage}" alt="abc" srcset="">
+    <h3>Movie:${movie.movieName}  </h3>
+    <p>Year:${movie.movieYear} </p>
+</div>`;
+            container.innerHTML+=card;
+            //console.log(movie);
+            
+        }) 
+
+    </script>
+</body>
+</html>
+
+
+ <!-- const card=`<div class="card">
+    <img src="kalki.jpg" alt="abc" srcset="">
+    <h3>Movie: Kalki </h3>
+    <p>Year: 2024</p>
+</div>`;
+
+        for(let i=0;i<5;i++){
+            container.innerHTML+=card;
+        } -->
+
+
+
+ <!-- const movies=[{movieImage:"kalki.jpg",
+                        movieName:"Kalki",
+                        movieYear:2024
+        },{movieImage:"salaar.jpg",
+                        movieName:"salaar",
+                        movieYear:2024
+        },{movieImage:"kalki.jpg",
+                        movieName:"Kalki",
+                        movieYear:2024
+        },{movieImage:"salaar.jpg",
+                        movieName:"salaar",
+                        movieYear:2024
+        },{movieImage:"kalki.jpg",
+                        movieName:"Kalki",
+                        movieYear:2024
+        },{movieImage:"salaar.jpg",
+                        movieName:"salaar",
+                        movieYear:2024
+        }]
+       
+        movies.map(movie=>{
+            const card=`<div class="card">
+    <img src="${movie.movieImage}" alt="abc" srcset="">
+    <h3>Movie:${movie.movieName}  </h3>
+    <p>Year:${movie.movieYear} </p>
+</div>`;
+            container.innerHTML+=card;
+            //console.log(movie);
+            
+        }) -->
+
+
+
+<!-- <div class="card">
+    <img src="kalki.jpg" alt="abc" srcset="">
+    <h3>Movie: Kalki </h3>
+    <p>Year: 2024</p>
+</div>
+<div class="card">
+    <img src="salaar.jpg" alt="abc" srcset="">
+    <h3>Movie: Salaar</h3>
+    <p>Year: 2024</p>
+</div> -->
