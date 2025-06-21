@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>functions</title>
+
+    <style>
+        .container{
+            margin-top: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            padding: 25px;
+            width: 100%;
+            justify-content: flex-start;
+            gap: 30px;
+        }
+
+        .card{
+            height: 25vh;
+            width: 20%;
+            background-color: antiquewhite;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 5px;
+        }
+    
+    </style>
+</head>
+<body>
+    <div class="bigcard" style="background-color: greenyellow; width: 80%; height: 100px;">
+<H4>ON WINDOW RESIZE, color changes to blue</H4>
+    </div>
+    <div class="container">
+<div class="card " id="red" onclick="eventFun(event)">
+    
+    <h4>Onclick</h4>
+    <p>RED color</p>
+</div>
+<div class="card" id="green" onclick="eventFun(event)">
+    
+     <h4>Onclick</h4>
+    <p>GREEN color</p>
+</div>
+<div class="card"  id="purple" onclick="eventFun(event)">
+    
+   <h4>Onclick</h4>
+    <p>PURPLE color</p>
+</div>
+<div class="card"  id="yellow" onclick="eventFun(event)">
+    
+     <h4>Onclick</h4>
+    <p>YELLOW color</p>
+</div>
+
+    </div>
+    <script>
+       
+        function eventFun(event) {
+            const eventType=event.type;
+             const element = event.currentTarget;
+            const color=event.currentTarget.id;
+ element.style.backgroundColor = color;
+
+//             if(eventType=="click"){
+//   console.log(eventType);
+        } 
+const bigCard=document.querySelector(".bigcard");
+window.addEventListener('resize', function() {
+  // Code to be executed after the entire page has loaded
+  console.log("window size was changed");
+  
+  bigCard.style.backgroundColor = 'blue';
+});
+
+window.addEventListener('load', function() {
+  // Code to be executed after the entire page has loaded
+  console.log("window was loaded");
+  alert("WINDOW was LOADED");
+  
+})
+
+
+
+    //             }
+// switch (eventType) {
+//   case 'click':
+//     element.style.backgroundColor = "red";
+//     break;
+//   case 'mousemove':
+//      element.style.backgroundColor = "green";
+//     break; // ... more cases
+//   default:
+//     // Code block to execute if no case matches the expression
+// }
+          
+   
+   
+     
+  
+    
+ 
+    </script>
+</body>
+</html>
