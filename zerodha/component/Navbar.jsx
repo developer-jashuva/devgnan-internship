@@ -11,7 +11,7 @@ const navigate = useNavigate();
   const menuItems = ['Dashboard', 'Orders', 'Holdings', 'Positions', 'Bids', 'Funds'];
 
   return (
-    <div className="bg-[#0f1114] text-white shadow-md flex flex-row justify-between">
+    <div className="bg-[#1C1C1E] text-white shadow-md flex flex-row justify-between">
       {/* Stock Info Bar */}
       <div className="flex justify-between items-center px-6 py-2 text-sm font-medium border-b border-zinc-800">
         <div className="flex gap-6 ">

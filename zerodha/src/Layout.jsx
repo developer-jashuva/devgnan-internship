@@ -1,7 +1,9 @@
 
 import Navbar from '../component/Navbar'
 import {Outlet  } from 'react-router-dom';
-import { ListFilterPlus } from 'lucide-react';
+import filter from "../public/filter.svg";
+import SearchIcon from '@mui/icons-material/Search';
+import LayersIcon from '@mui/icons-material/Layers';
 function Layout() {
 
 
@@ -26,15 +28,17 @@ const stocks = [
     <>
     <Navbar/>
     <div className='flex gap-1  bg-black pt-[3px]'>
-        {/* left side*/}
-    <div className="bg-[#111] text-white min-h-screen ml-5 flex justify-center items-start w-1/3">
-      <div className="w-full max-w-md bg-[#1C1C1E] rounded-lg shadow-md p-4">
-        <div className="flex justify-between items-center text-sm text-gray-400 mb-2 ">
+       
+    <div className="bg-[#111]  text-white min-h-screen ml-5 flex justify-center items-start w-1/3">
+      <div className="w-full max-w-md shadow-md p-4 ">
+
+        <div className="flex bg-[#1C1C1E] rounded-lg  justify-between items-center text-sm text-gray-400 mb-2 ">
+          <SearchIcon color='black'/>
           <input
-            className="bg-[#2a2a2c] text-sm px-3 py-1 rounded-md w-full mr-2 outline-none"
+            className="bg-[#1C1C1E]  text-sm px-3 py-1 rounded-md w-full mr-2 outline-none"
             placeholder="Search eg: infy bse, nifty fut, index fund, etc"
           />
-         
+          <img src={filter} className="w-5 h-5" alt="Filter" />
          </div>
           <div className='flex justify-between '>
             <p className="text-xs text-gray-500 mb-2">Watchlist 1 (7 / 250)</p>
@@ -83,7 +87,7 @@ const stocks = [
 
       {/* Add group icon */}
       <div className="cursor-pointer text-white flex items-center">
-      <ListFilterPlus />
+    <LayersIcon/>
       </div>
     </div>
 
