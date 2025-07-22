@@ -4,9 +4,9 @@ function WatchlistItem({ name, price, change, net }) {
 
   return (
     <div className="flex justify-between py-2 border-b border-gray-800 text-sm">
-      <span className={textColor}>{name}</span>
+      <span className={`${textColor} `}>{name}</span>
       <span>{Math.abs(price)}</span>
-      <span className={`flex flex-col items-end ${textColor}`}>
+      <span className={`flex flex-col items-end  ${textColor}`}>
         <span>{Math.abs(change).toFixed(2)}%</span>
         <span>{net.toFixed(2)}</span>
       </span>

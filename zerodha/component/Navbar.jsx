@@ -14,7 +14,7 @@ const navigate = useNavigate();
     <div className="bg-[#0f1114] text-white shadow-md flex flex-row justify-between">
       {/* Stock Info Bar */}
       <div className="flex justify-between items-center px-6 py-2 text-sm font-medium border-b border-zinc-800">
-        <div className="flex gap-6">
+        <div className="flex gap-6 ">
           <span>
             NIFTY 50 <span className="text-green-400">25637.80</span>{' '}
             <span className="text-green-400">+88.80 (0.35%)</span>
@@ -25,8 +25,11 @@ const navigate = useNavigate();
           </span>
         </div>
         <div className="bg-[#2a2a2a] h-[52px] w-[2px] py-0 mx-1 ml-3"></div>
-        <div className="text-orange-500 font-bold text-xl ml-5">{'<'}</div>
-      </div>
+         <img
+        src='https://kite.zerodha.com/static/images/kite-logo.svg'
+        alt="Zerodha logo"
+        className="w-[30px] h-[15px] flex items-center mx-auto"  />
+       </div>
 
       {/* Navigation Menu */}
       <div className="flex justify-between items-center px-6 py-3">

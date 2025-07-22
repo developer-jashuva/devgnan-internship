@@ -25,22 +25,9 @@ const stocks = [
   return (
     <>
     <Navbar/>
-    <div className='flex gap-1 bg-purple-300 pt-[3px]'>
+    <div className='flex gap-1  bg-black pt-[3px]'>
         {/* left side*/}
-        {/* <div className=' w-1/3 flex flex-col bg-green-300'>
-           <div className='flex justify-between w-full bg-blue-300 ' >
-            <Search />
-            <input type="search" name="search" id="search" className='w-auto text-slate-950' placeholder='search eg:infy bse, nifty fut,index ' />
-            <Wifi />
-            </div>
-           <div> watch</div>
-           <div>table</div>
-           <div>footer</div>
-        </div> */}
-    
-
-
-    <div className="bg-[#111] text-white min-h-screen flex justify-center items-start w-1/3">
+    <div className="bg-[#111] text-white min-h-screen ml-5 flex justify-center items-start w-1/3">
       <div className="w-full max-w-md bg-[#1C1C1E] rounded-lg shadow-md p-4">
         <div className="flex justify-between items-center text-sm text-gray-400 mb-2 ">
           <input
@@ -63,16 +50,16 @@ const stocks = [
         <div className="divide-y divide-gray-700 text-sm">
           {stocks.map((stock, index) => (
             <div key={index} className="flex justify-between py-2 text-xs">
-              <span className={`${stock.up ? 'text-green-400' : 'text-red-400'} font-small`}>
+              <span className={`${stock.up ? 'text-green-400' : 'text-red-400' }   w-1/3 font-small`}>
                 {stock.name}
               </span>
-              <div className="text-right">
+              <div className="text-left  w-1/3">
                 <p className="text-gray-300">{stock.price}</p>
                 <p className={`${stock.up ? 'text-green-400' : 'text-red-400'}`}>
                   {stock.change} {stock.up ? '↑' : '↓'}
                 </p>
               </div>
-              <p className={`${stock.up ? 'text-green-400' : 'text-red-400'} text-right min-w-[60px]`}>
+              <p className={`${stock.up ? 'text-green-400' : 'text-red-400'} text-left min-w-[60px] w-1/4`}>
                 {stock.value}
               </p>
             </div>
