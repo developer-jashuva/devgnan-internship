@@ -1,18 +1,22 @@
 import React from "react";
 import Navbar from "./Navbar";
 
+import DataSaverOffOutlinedIcon from '@mui/icons-material/DataSaverOffOutlined';
+import WaterDropIcon from '@mui/icons-material/WaterDrop';
+
 function Dashboard() {
   return (
     <>
       <div className="bg-[#1C1C1E] w-10/12 p-5 flex flex-col justify-between">
-        <div className="border-b-2 border-zinc-700 py-3">
+        <div className="border-b border-zinc-700 py-3">
           <h1 className=" text-white text-4xl">Hi, sri</h1>
         </div>
         <div className="text-white flex ">
           <div className="flex justify-between w-1/2 gap-2">
-            <div className="w-1/2 flex flex-col gap-2 border-r-2 border-zinc-700">
-              <p>Equity</p>
-              <p className="text-5xl">450.0</p>
+            <div className="w-1/2 flex flex-col gap-2 ">
+             
+              <p> <DataSaverOffOutlinedIcon />  Equity</p>
+              <p className="text-5xl border-r border-zinc-700">450.0</p>
               <p>margin available</p>
             </div>
             <div className="w-1/2 flex flex-col gap-2 ">
@@ -22,9 +26,9 @@ function Dashboard() {
             </div>
           </div>
           <div className="flex justify-between w-1/2 gap-2 ">
-            <div className="w-1/2 flex flex-col gap-2 border-r-2 border-zinc-700">
-              <p>commodity </p>
-              <p className="text-5xl">0</p>
+            <div className="w-1/2 flex flex-col gap-2">
+              <p> <WaterDropIcon/>  commodity </p>
+              <p className="text-5xl  border-r border-zinc-700">0</p>
               <p>margin available</p>
             </div>
             <div className="w-1/2 flex flex-col gap-2">
@@ -34,12 +38,12 @@ function Dashboard() {
             </div>
           </div>
         </div>
-        <div className="border-t-2 border-zinc-700 py-3">
-          <h1 className=" text-white text-3xl">Holdings (26)</h1>
+        <div className="border-t border-zinc-700 flex py-3">
+         <h1 className=" text-white text-3xl">  Holdings (26)</h1>
         </div>
 
         <div className="text-white flex justify-between gap-3">
-          <div className=" flex flex-col gap-2 w-1/2 justify-start border-r-2 border-zinc-700">
+          <div className=" flex flex-col gap-2 w-1/2 justify-start border-r border-zinc-700">
             <div className="text-green-500">
               {" "}
               <span className="text-3xl">54.95k</span> (+13.85%)
@@ -104,12 +108,27 @@ function Dashboard() {
 
             </div>
         </div>
-<div className="border-t-2 border-zinc-700">
+<div className="border-t border-zinc-700">
 <p className="text-white">Market overview</p>
 </div>
 
 
-<div>
+<div className="px-4 md:px-8  text-white flex flex-col md:flex-row gap-6">
+
+  {/* Market Overview */}
+  <div className="rounded-xl  w-full md:w-1/2">
+    <p className="text-white text-[18px] font-semibold flex items-center gap-2">
+  {/* <img src={market} alt="market" className="h-5 w-5" /> */}
+  Market overview
+</p>
+   
+  </div>
+
+  {/* Empty Positions */}
+  <div className="rounded-xl flex flex-col justify-center items-center w-full md:w-1/2 py-6">
+    <div className="text-3xl">⚓</div>
+    <p className="text-gray-500 text-sm mt-2">You don't have any positions yet</p>
+  </div>
 
 </div>
       </div>

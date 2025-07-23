@@ -1,5 +1,7 @@
 import React from 'react'
-
+import DataSaverOffOutlinedIcon from '@mui/icons-material/DataSaverOffOutlined';
+import WaterDropIcon from '@mui/icons-material/WaterDrop';
+import AdjustOutlinedIcon from '@mui/icons-material/AdjustOutlined';
 function Funds() {
 
   const data = [
@@ -101,23 +103,23 @@ function Funds() {
   <div className="text-white font-semibold flex pl-5 pb-3">
           <div className="flex justify-between w-1/2 gap-2">
             <div className="w-1/2 flex flex-col gap-2">
-              <p>Equity</p>
+              <p><DataSaverOffOutlinedIcon />   Equity</p>
             
             </div>
             <div className="w-1/2 flex  gap-2 ">
               
-              <p className="text-blue-700">View statement</p>
+              <p className="text-blue-700"><AdjustOutlinedIcon fontSize="5px"  color="blue"/> View statement</p>
                      <p className="text-blue-700">Help</p>
             </div>
           </div>
           <div className="text-white font-semibold flex justify-between w-1/2 gap-2 ">
             <div className="w-1/2 flex flex-col gap-2">
-              <p>commodity </p>
+              <p> <WaterDropIcon/>   commodity </p>
             
             </div>
             <div className="w-1/2 flex  gap-2">
              
-              <p className="text-blue-700">View statement</p>
+              <p className="text-blue-700"><AdjustOutlinedIcon fontSize="5px"  color="blue"/> View statement</p>
               <p className="text-blue-700">Help</p>
             </div>
           </div>
