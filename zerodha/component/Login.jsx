@@ -35,11 +35,11 @@ const data= await response.json();
  
   return (
     <>
-    <div className='flex flex-col justify-center align-middle'>
+    <div className='flex flex-col justify-center align-middle bg-[#09090a]'>
 
     
     <div className='flex  justify-center '>
-   <div className="form-container">
+   <div className="form-container bg-[#1C1C1E]">
         <div className="form-card">
             <div className="logo-section">
                 <img src="https://kite.zerodha.com/static/images/kite-logo.svg" alt="kite" />
@@ -48,11 +48,11 @@ const data= await response.json();
                 <div className="heading">
                         <p>Login to kite</p>
                 </div>     
-                <div className="form-input border my-2">
+                <div className="form-input border bg-[#1C1C1E] my-7 ">
                  
                     <input type="text" name="username" id="username" placeholder="Phone or User Id" label='Phone or User Id' required="required" minlength="6" maxlength="15" autofocus="autofocus" pattern="[a-zA-Z0-9]+" rules="" dynamicwidthoffset="4" onChange={(e)=>{setEmail(e.target.value)}}/>
                 </div>
-                <div className="form-input border my-2">
+                <div className="form-input border bg-[#1C1C1E] my-4">
                 
                     <input type="password" name="password" id="password" placeholder="Password" label='Password' required="required" onChange={(e)=>{setPassword(e.target.value)}}/>
                 </div>
@@ -68,14 +68,14 @@ const data= await response.json();
   </div>
 
  
-    <div className='my-14'>
- <img
+    <div className='my-8'>
+    <img
         src='https://kite.zerodha.com/static/images/kite-logo.svg'
         alt="Zerodha logo"
         className="w-[30px] h-[15px] flex items-center mx-auto"
-      />
+      /> Zerodha
 
-      <p className="text-center text-[#9B9B9B] text-[14px]">
+      <p className="text-center text-[#9B9B9B] my-5 text-[14px]">
         Don't have an account? Signup now!
       </p>
 

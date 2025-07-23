@@ -29,7 +29,7 @@ const stocks = [
     <Navbar/>
     <div className='flex gap-1  bg-black pt-[3px]'>
        
-    <div className="bg-[#111]  text-white min-h-screen ml-5 flex justify-center items-start w-1/3">
+    <div className="bg-[#1C1C1E] text-white min-h-screen ml-5 flex justify-center items-start w-1/3">
       <div className="w-full max-w-md shadow-md p-4 ">
 
         <div className="flex bg-[#1C1C1E] rounded-lg  justify-between items-center text-sm text-gray-400 mb-2 ">
@@ -70,7 +70,7 @@ const stocks = [
           ))}
         </div>
 
-        <div className="flex  justify-between mt-32 bg-[#1e1e1e]  border-t border-gray-700">
+        <div className="flex  justify-between mt-16 bg-[#1e1e1e]  border-t border-gray-700">
       {/* Page numbers */}
       <div className="flex  items-center space-x-5 text-gray-400 text-sm">
         {[1, 2, 3, 4, 5, 6, 7].map((num) => (

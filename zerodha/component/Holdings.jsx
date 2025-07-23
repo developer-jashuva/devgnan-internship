@@ -1,6 +1,12 @@
 import React from "react";
 import { useState } from "react";
 import {ChevronDown} from 'lucide-react';
+import AdjustOutlinedIcon from '@mui/icons-material/AdjustOutlined';
+
+import GroupIcon from '@mui/icons-material/Group';
+import DownloadIcon from '@mui/icons-material/Download';
+
+
 function Holdings() {
   const menuItems = ["All", "Equity", "Mutual Funds"];
   const   tableData=[  {
@@ -217,13 +223,13 @@ function Holdings() {
 
           <div className="flex items-center space-x-4 text-sm font-medium">
             <span className="text-blue-400 hover:underline cursor-pointer">
-              Family
+                <GroupIcon color="blue" fontSize="5px" /> Family
             </span>
             <span className="text-blue-400 hover:underline cursor-pointer">
-              Analytics
+                 <AdjustOutlinedIcon fontSize="5px"  color="blue"/>Analytics
             </span>
             <span className="text-blue-400 hover:underline cursor-pointer">
-              Download
+                  <DownloadIcon fontSize="5px"  color="blue"/> Download
             </span>
           </div>
         </div>
